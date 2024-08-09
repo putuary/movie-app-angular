@@ -1,0 +1,67 @@
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="page-header d-flex align-items-center" style="background-image: url('');">
+        <div class="container position-relative">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-6 text-center">
+              <h2>{{ path == 'tv' ? 'TV Series' : 'Movie' }} Details</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav>
+        <div class="container">
+          <ol>
+            <li><a routerLink="/">Home</a></li>
+            <li>{{ path == 'tv' ? 'TV Series' : 'Movie' }} Details</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Details Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row g-5">
+
+          <div class="col-lg-4">
+
+            <article class="blog-details">
+
+              <div class="post-img">
+                <img [src]="imageUrl+data.backdrop_path" [alt]="data.title ?? data.name" class="img-fluid">
+              </div>
+
+              <h2 class="title">{{ data.title ?? data.name }}</h2>
+
+              <div class="meta-top">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2020-01-01">Jan 1, 2022</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html">12 Comments</a></li>
+                </ul>
+              </div><!-- End meta top -->
+
+            </article><!-- End blog post -->
+
+          </div>
+
+          <div class="col-lg-8">
+
+            <div class="sidebar content">
+                <h3>Overview</h3>
+                <p>
+                  {{ data.overview }}
+                </p>
+
+              </div><!-- End post content -->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Blog Details Section -->
+
+  </main><!-- End #main -->
